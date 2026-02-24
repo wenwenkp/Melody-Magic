@@ -103,7 +103,7 @@ export default function App() {
           )}
         </AnimatePresence>
 
-        <div className="w-full flex flex-col items-center gap-12">
+        <div className="w-full flex flex-col items-center gap-5">
           <div className="w-full relative">
             {mode === 'play' && (
               <div className="text-center">
