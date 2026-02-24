@@ -2,16 +2,16 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { NOTES } from '../utils/audio';
 
-export const Keyboard = ({ activeNoteId, onKeyPress }: any) => {
+export const Keyboard = ({ activeNoteId, mode, onKeyPress }: any) => {
   return (
     <div className="flex justify-center items-start relative mt-12 select-none max-w-3xl mx-auto">
       {/* Hand labels */}
       <div className="absolute -top-10 left-0 right-0 flex pointer-events-none">
         <div className="flex justify-center items-center text-slate-500 font-bold text-sm sm:text-lg" style={{ width: `${(3/7)*100}%` }}>
-          Left Hand (左手)
+          Left Hand
         </div>
         <div className="flex justify-center items-center text-slate-500 font-bold text-sm sm:text-lg" style={{ width: `${(4/7)*100}%` }}>
-          Right Hand (右手)
+          Right Hand
         </div>
       </div>
 
@@ -32,7 +32,7 @@ export const Keyboard = ({ activeNoteId, onKeyPress }: any) => {
           >
             <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center ${isActive ? 'bg-white/20' : 'bg-slate-100'}`}>
               <span className={`font-black text-sm sm:text-lg ${isActive ? 'text-white' : 'text-slate-400'}`}>
-                {note.name}
+                {mode == 'learn' ? note.name : ''}
               </span>
             </div>
           </motion.div>
