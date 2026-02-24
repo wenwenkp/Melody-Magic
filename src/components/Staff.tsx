@@ -4,9 +4,9 @@ import { NOTES } from '../utils/audio';
 
 const TrebleClef = () => (
   <img 
-    src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Treble_clef.svg" 
+    src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Treble_clef.svg"
     alt="Treble Clef" 
-    className="absolute left-6 top-4 h-36 pointer-events-none opacity-80" 
+    className="absolute left-7 top-[calc(var(--spacing)*2.7)] h-[calc(var(--spacing)*36.6)] pointer-events-none opacity-80"
   />
 );
 
