@@ -47,6 +47,7 @@ export default function App() {
         setTimeout(pickRandomNote, 1000);
       } else {
         // Incorrect
+        setScore(0);
         setStreak(0);
       }
     }
