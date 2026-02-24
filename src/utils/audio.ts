@@ -22,9 +22,9 @@ export const playNote = (frequency: number, type: OscillatorType = 'sine') => {
 };
 
 export const NOTES = [
-  { id: 'G3', name: 'G', freq: 196.00, color: '#ef4444', y: 110, hand: 'left', stem: 'down' },
-  { id: 'A3', name: 'A', freq: 220.00, color: '#f97316', y: 120, hand: 'left', stem: 'down' },
-  { id: 'B3', name: 'B', freq: 246.94, color: '#eab308', y: 130, hand: 'left', stem: 'down' },
+  { id: 'G3', name: 'G', freq: 196.00, color: '#ef4444', y: 50, hand: 'left', stem: 'down' },
+  { id: 'A3', name: 'A', freq: 220.00, color: '#f97316', y: 40, hand: 'left', stem: 'down' },
+  { id: 'B3', name: 'B', freq: 246.94, color: '#eab308', y: 30, hand: 'left', stem: 'down' },
   { id: 'C4', name: 'C', freq: 261.63, color: '#22c55e', y: 140, hand: 'right', stem: 'up' },
   { id: 'D4', name: 'D', freq: 293.66, color: '#3b82f6', y: 130, hand: 'right', stem: 'up' },
   { id: 'E4', name: 'E', freq: 329.63, color: '#6366f1', y: 120, hand: 'right', stem: 'up' },

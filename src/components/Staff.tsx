@@ -27,7 +27,7 @@ export const Staff = ({ mode, activeNoteId, targetNoteId, onNoteClick }: any) =>
       {/* Notes */}
       <div className="relative w-full h-full ml-24 sm:ml-32">
         {notesToShow.map((note, index) => {
-          const isActive = mode === 'learn' ? activeNoteId === note.id : true;
+          const isActive = mode === 'learn' ? activeNoteId === note.id : false;
           const leftPos = mode === 'learn' ? `${(index * 11) + 5}%` : '40%';
           
           return (
@@ -36,7 +36,7 @@ export const Staff = ({ mode, activeNoteId, targetNoteId, onNoteClick }: any) =>
               className="absolute cursor-pointer flex items-center justify-center w-8 h-8"
               style={{ 
                 left: leftPos, 
-                top: `${note.y - 16}px`, // center the 32px container on the line
+                top: `${note.y - 30}px`, // center the 32px container on the line
               }}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -53,7 +53,7 @@ export const Staff = ({ mode, activeNoteId, targetNoteId, onNoteClick }: any) =>
                 animate={{ 
                   backgroundColor: isActive ? note.color : '#1e293b',
                   scale: isActive ? 1.2 : 1,
-                  y: isActive ? [0, -5, 0] : 0
+                  y: isActive ? -5 : 0
                 }}
                 transition={{ type: 'spring', bounce: 0.6 }}
               >

@@ -22,13 +22,13 @@ export const Keyboard = ({ activeNoteId, onKeyPress }: any) => {
             key={note.id}
             className={`relative w-10 sm:w-16 md:w-20 h-40 sm:h-48 md:h-56 border-2 sm:border-4 border-slate-800 rounded-b-xl sm:rounded-b-2xl mx-[1px] sm:mx-1 cursor-pointer flex items-end justify-center pb-4 sm:pb-6 shadow-lg transition-colors`}
             style={{ 
-              backgroundColor: isActive ? note.color : 'white',
+              backgroundColor: isActive ? note.color : '#ffffff',
               zIndex: 1
             }}
             whileHover={{ backgroundColor: isActive ? note.color : '#f8fafc' }}
             whileTap={{ scaleY: 0.95, transformOrigin: 'top' }}
             onMouseDown={() => onKeyPress(note)}
-            onTouchStart={(e) => { e.preventDefault(); onKeyPress(note); }}
+            onTouchStart={() => { onKeyPress(note); }}
           >
             <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center ${isActive ? 'bg-white/20' : 'bg-slate-100'}`}>
               <span className={`font-black text-sm sm:text-lg ${isActive ? 'text-white' : 'text-slate-400'}`}>

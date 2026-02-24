@@ -105,7 +105,7 @@ export default function App() {
         <div className="w-full flex flex-col items-center gap-12">
           <div className="w-full relative">
             {mode === 'play' && (
-              <div className="absolute -top-12 left-0 right-0 text-center">
+              <div className="text-center">
                 <h2 className="text-2xl font-black text-slate-700">Which note is this?</h2>
               </div>
             )}
